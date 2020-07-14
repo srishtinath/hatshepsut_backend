@@ -1,0 +1,2 @@
+class ItemClueList < ApplicationRecord
+end
