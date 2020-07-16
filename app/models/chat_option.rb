@@ -1,0 +1,2 @@
+class ChatOption < ApplicationRecord
+end

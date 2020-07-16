@@ -1,0 +1,14 @@
+class LocationsController < ApplicationController
+
+    def index
+        @locations = Location.all
+        render json: @locations, include: [:items]
+    end
+
+    def show
+        @location = Location.find(params[:id])
+        render json: @location, include: [:items]
+    end
+    
+    
+end

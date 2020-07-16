@@ -10,57 +10,64 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_14_204442) do
+ActiveRecord::Schema.define(version: 2020_07_16_220655) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
-    t.string "room"
     t.string "description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "room_id"
+  end
+
+  create_table "chat_options", force: :cascade do |t|
+    t.integer "chat_id"
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "chats", force: :cascade do |t|
-    t.string "character"
     t.string "response"
-    t.string "options"
     t.string "prevResponse"
     t.string "nextResponse"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "character_id"
   end
 
   create_table "clue_lists", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
   end
 
   create_table "item_clue_lists", force: :cascade do |t|
-    t.string "item"
-    t.string "cluelist"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "item_id"
+    t.integer "clue_list_id"
   end
 
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "location"
-    t.string "room"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "location_id"
+    t.string "image_url2"
   end
 
   create_table "locations", force: :cascade do |t|
     t.string "name"
-    t.string "room"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "room_id"
   end
 
   create_table "rooms", force: :cascade do |t|
@@ -68,6 +75,7 @@ ActiveRecord::Schema.define(version: 2020_07_14_204442) do
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "story_id"
   end
 
   create_table "stories", force: :cascade do |t|
@@ -75,19 +83,32 @@ ActiveRecord::Schema.define(version: 2020_07_14_204442) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "user_characters", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "character_id"
+  end
+
+  create_table "user_locations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "location_id"
+  end
+
   create_table "user_rooms", force: :cascade do |t|
-    t.string "user"
-    t.string "room"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.boolean "complete?"
+    t.boolean "characterSpoken?"
+    t.boolean "cluesFound?"
+    t.integer "user_id"
+    t.integer "room_id"
   end
 
   create_table "user_stories", force: :cascade do |t|
     t.string "progress"
-    t.string "user"
-    t.string "story"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id"
+    t.integer "story_id"
   end
 
   create_table "users", force: :cascade do |t|
