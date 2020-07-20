@@ -39,7 +39,7 @@ User.destroy_all
 
 # users
 
-caroline = User.create(name: "Caroline")
+caroline = User.create(name: "Caroline", password: "abc123")
 cluelist1 = ClueList.create(user: caroline)
 
 hatshepsut = Story.create

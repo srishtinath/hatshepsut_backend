@@ -6,6 +6,11 @@ class ItemClueListsController < ApplicationController
         render json: @newItem
     end
 
+    def show
+        @findEntry = ItemClueList.find(params[:id])
+        render :json => @findEntry
+    end
+
     def index
         @itemcluelists = ItemClueList.all
         render json: @itemcluelists

@@ -12,4 +12,8 @@ class User < ApplicationRecord
 
     has_many :user_characters
     has_many :characters, through: :user_characters
+
+    validates_uniqueness_of :name
+
+    has_secure_password
 end

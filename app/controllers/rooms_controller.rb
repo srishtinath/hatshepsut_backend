@@ -5,4 +5,10 @@ class RoomsController < ApplicationController
         render json: @rooms, include: [:locations]
     end
     
+    def show
+        @room = Room.find(params[:id])
+        render json: @room, include: [:locations]
+    end
+    
+
 end
