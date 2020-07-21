@@ -54,10 +54,10 @@ home = Room.create(name: "home", story: hatshepsut)
 
 userRoom1 = UserRoom.create(user: caroline, room: tent, complete?: false, characterSpoken?: false, cluesFound?: false)
 
-shelf = Location.create(name: "shelf", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594916954/Room1/601-6012270_bookcase-clipart-transparent-book-shelf-vector-png_cbclpc.png")
-footprints = Location.create(name: "footprints", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594916847/Room1/footsteps_lslhwm.png")
-chest = Location.create(name: "chest", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594936185/Room1/Screen_Shot_2020-07-16_at_12.10.27_PM_git3gj.png")
-hookah = Location.create(name: "hookah", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594915670/Room1/hookah-clipart-vectorportal_pbrghh.png")
+shelf = Location.create(name: "shelf", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595352641/Room1/book-shelf-template-color-vector-21267974_rbu6gh.png", positionX: 65, positionY: 55, size: 30 )
+footprints = Location.create(name: "footprints", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594916847/Room1/footsteps_lslhwm.png", positionX: 85, positionY: 1, size: 30)
+chest = Location.create(name: "chest", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594936185/Room1/Screen_Shot_2020-07-16_at_12.10.27_PM_git3gj.png", positionX: 20, positionY: 5, size: 15)
+hookah = Location.create(name: "hookah", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594915670/Room1/hookah-clipart-vectorportal_pbrghh.png", positionX: 60, positionY: 2, size: 25)
 
 homeLocation = home.locations.create(name: "home")
 
@@ -71,10 +71,15 @@ cluelist1.items.create(name: "Looks like there are some footprints over there...
 
 guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595298441/Room1/Screen_Shot_2020-07-20_at_10.24.52_PM_q99q5s.png")
 
-guidechat1 = Chat.create(character: guide, response: "Did you hear about the stolen bracelet??")
+guidechat1 = Chat.create(character: guide, response: "It's such a pity to lose such a great woman. The police are going to be here tomorrow but I doubt they're going to do anything to find the culprit. Wull you help me find out who did this?")
 
-chatOption1 = ChatOption.create(chat_id:guidechat1.id, text: "Wow, sucks to suck")
-chatOption2 = ChatOption.create(chat_id:guidechat1.id, text: "Why would anyone do that?")
-chatOption3 = ChatOption.create(chat_id:guidechat1.id, text: "Do we have any leads on who it might have been?")
-chatOption4 = ChatOption.create(chat_id:guidechat1.id, text: "You took it right? You can tell me if you did. ")
-chatOption5 = ChatOption.create(chat_id:guidechat1.id, text: "Let's work together to find it!")
+guidechat2 = Chat.create(character: guide, response: "Are you sure there's nothing I can do to convince you? I have reason to believe your life might be in danger if we don't find them...")
+guidechat3 = Chat.create(character: guide, response: "Thank you so much! Here's what I know so far - there were footsteps leading away from the body when I arrived at the scene.")
+
+chatOption1 = ChatOption.create(chat:guidechat1, text: "Absolutely! You can count on me.", prevResponse_id: guidechat1.id, nextResponse_id: guidechat3.id)
+chatOption2 = ChatOption.create(chat:guidechat1, text: "I don't think I should get involved...",prevResponse_id: guidechat1.id, nextResponse_id: guidechat2.id)
+
+chatOption3 = ChatOption.create(chat: guidechat3, text: "That's weird... do you know who they belonged to?", prevResponse_id: guidechat3.id)
+chatOption4 = ChatOption.create(chat: guidechat3, text: "It could've just been a coincidence...", prevResponse_id: guidechat3.id)
+
+chatOption5 = ChatOption.create(chat: guidechat2, text: "Hmm, I'll try and help I guess", prevResponse_id: guidechat2.id, nextResponse_id: guidechat3.id)
