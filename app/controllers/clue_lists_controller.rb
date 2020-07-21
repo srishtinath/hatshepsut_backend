@@ -9,6 +9,9 @@ class ClueListsController < ApplicationController
 
     def show
         @cluelist = ClueList.find(params[:id])
+        if !@cluelist.items
+            @cluelist.items.create(name: "Looks like there were some footprints near the murder scene...", location_id: Location.find_by(name: "home").id)
+        end
         render json: @cluelist, include: [:items]
     end
     

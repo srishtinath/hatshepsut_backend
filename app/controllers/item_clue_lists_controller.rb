@@ -3,7 +3,7 @@ class ItemClueListsController < ApplicationController
 
     def create
         @newItem = ItemClueList.create(icl_params)
-        render json: @newItem
+        render json: @newItem.item
     end
 
     def show

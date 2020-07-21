@@ -42,6 +42,7 @@ User.destroy_all
 caroline = User.create(name: "Caroline", password: "abc123")
 cluelist1 = ClueList.create(user: caroline)
 
+
 hatshepsut = Story.create
 
 userstory1 = UserStory.create(user: caroline, story: hatshepsut, progress: "0")
@@ -49,6 +50,7 @@ userstory1 = UserStory.create(user: caroline, story: hatshepsut, progress: "0")
 #Room1
 
 tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594929784/Room1/Screen_Shot_2020-07-16_at_12.37.17_PM_stmsht.png")
+home = Room.create(name: "home", story: hatshepsut)
 
 userRoom1 = UserRoom.create(user: caroline, room: tent, complete?: false, characterSpoken?: false, cluesFound?: false)
 
@@ -57,11 +59,14 @@ footprints = Location.create(name: "footprints", room: tent, image_url: "https:/
 chest = Location.create(name: "chest", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594936185/Room1/Screen_Shot_2020-07-16_at_12.10.27_PM_git3gj.png")
 hookah = Location.create(name: "hookah", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594915670/Room1/hookah-clipart-vectorportal_pbrghh.png")
 
+homeLocation = home.locations.create(name: "home")
 
 book1 = Item.create(name: "archaeology book", location: shelf, description: "Just the history of the study of archaeology... nothing to see here", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.44_PM_nncx01.png")
 book2 = Item.create(name: "bookmarked book", location: shelf, description: "A clue!", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.01.43_PM_lkhuzn.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.33_PM_ifmvym.png")
 book3 = Item.create(name: "pharaoh book", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
 
+firstClue = homeLocation.items.create(name: "Looks like there are some footprints over there...")
+cluelist1.items.create(name: "Looks like there are some footprints over there...", location_id: Location.find_by(name: "home"))
 # Character
 
 guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.")
