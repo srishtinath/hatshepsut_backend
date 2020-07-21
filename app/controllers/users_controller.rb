@@ -14,6 +14,7 @@ class UsersController < ApplicationController
     
     def create
         @user = User.create(user_params)
+        ClueList.create(user: @user)
         if @user.valid?
             wristband = encode_token({user_id: @user.id})
             render json: {
