@@ -1,3 +1,3 @@
 class ChatSerializer < ActiveModel::Serializer
-    attributes :id, :chat_options
+    attributes :id, :response, :chat_options, :prevResponse, :nextResponse
 end
