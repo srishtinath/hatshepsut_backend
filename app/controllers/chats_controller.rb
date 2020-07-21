@@ -3,5 +3,6 @@ class ChatsController < ApplicationController
         @chats = Chat.all
         render json: @chats
     end
-    
+
+
 end
