@@ -69,7 +69,7 @@ firstClue = homeLocation.items.create(name: "Looks like there are some footprint
 cluelist1.items.create(name: "Looks like there are some footprints over there...", location_id: Location.find_by(name: "home"))
 # Character
 
-guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.")
+guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595298441/Room1/Screen_Shot_2020-07-20_at_10.24.52_PM_q99q5s.png")
 
 guidechat1 = Chat.create(character: guide, response: "Did you hear about the stolen bracelet??")
 
