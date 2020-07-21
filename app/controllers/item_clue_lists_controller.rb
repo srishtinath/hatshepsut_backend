@@ -3,6 +3,7 @@ class ItemClueListsController < ApplicationController
 
     def create
         @newItem = ItemClueList.create(icl_params)
+        # byebug
         render json: @newItem.item
     end
 
@@ -18,6 +19,6 @@ class ItemClueListsController < ApplicationController
    
     private
     def icl_params
-        params.permit(:item_id, :clue_list_id)
+        params.permit(:id, :item_id, :clue_list_id)
     end
 end

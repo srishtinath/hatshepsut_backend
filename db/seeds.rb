@@ -71,7 +71,7 @@ cluelist1.items.create(name: "Looks like there are some footprints over there...
 
 guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595298441/Room1/Screen_Shot_2020-07-20_at_10.24.52_PM_q99q5s.png")
 
-guidechat1 = Chat.create(character: guide, response: "It's such a pity to lose such a great woman. The police are going to be here tomorrow but I doubt they're going to do anything to find the culprit. Wull you help me find out who did this?")
+guidechat1 = Chat.create(character: guide, response: "It's such a pity to lose such a great woman. The police are going to be here tomorrow but I doubt they're going to do anything to find the culprit. Will you help me find out who did this?")
 
 guidechat2 = Chat.create(character: guide, response: "Are you sure there's nothing I can do to convince you? I have reason to believe your life might be in danger if we don't find them...")
 guidechat3 = Chat.create(character: guide, response: "Thank you so much! Here's what I know so far - there were footsteps leading away from the body when I arrived at the scene.")
