@@ -29,6 +29,7 @@ class UsersController < ApplicationController
     def login
         @user = User.find_by(name: params[:name])
         if @user && @user.authenticate(params[:password])
+            # byebug
             wristband = encode_token({user_id: @user.id})
             render json: {user: UserSerializer.new(@user), token: wristband}
         elsif @user && !@user.authenticate(params[:password])
