@@ -56,11 +56,6 @@ home = Room.create(name: "home", story: hatshepsut)
 
 userRoom1 = UserRoom.create(user: caroline, room: tent, complete?: false, characterSpoken?: false, cluesFound?: false)
 
-shelf = Location.create(name: "shelf", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425469/Room1/800px_COLOURBOX6860246_jjj47r.png", positionX: 20, positionY: 65, size: 17 )
-book1 = Item.create(name: "Evidential Reasoning in Archaeology", location: shelf, description: "Just the history of the study of archaeology... nothing to see here", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.44_PM_nncx01.png")
-book2 = Item.create(name: "The Woman Who Would Be King", location: shelf, description: "Is there a page bookmarked in here? Looks like Tess wanted to remember something about Queen Hatshepsut's mother", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.10_PM_mp38iv.png")
-book3 = Item.create(name: "Ancient Egyptian Rulers", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
-
 table = Location.create(name: "table", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427993/Room1/arabic-coffee-table-ethnic-traditional-moroccan-vector-24182980_oav30i.png", positionX: 38, positionY: 7, size: 25)
 hookah = Item.create(name: "Hookah", location: table, description: "Looks like there are some lipstick marks on the tip", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425946/Room1/Screen_Shot_2020-07-22_at_9.50.01_AM_wrcjxz.png")
 book = Item.create(name: "Tess's Journal", location: table, description: "This looks like Tess's journal. It looks like she was recording developments in the dig in it", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425774/Room1/Screen_Shot_2020-07-22_at_9.48.42_AM_b1cn43.png")
@@ -74,10 +69,14 @@ purse = Item.create(name: "Tess's wallet", location: luggage, description: "Tess
 lantern = Location.create(name: "lantern", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425539/Room1/islamic-style-colored-lantern-design-vector-20967979_k3gb7h.png", positionX: 82, positionY:75 , size: 5)
 note = Item.create(name: "A note! Hidden in the lantern! What does it say?", location: lantern, description: "It just says... 'The priest did it'", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595429221/Room1/Screen_Shot_2020-07-22_at_10.46.13_AM_kid1cf.png")
 
-scarab = Location.create(name: "scarab brooch", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595433225/Room1/Scarab_eplx8o.png", positionX: 50, positionY: 70, size: 20)
+scarab = Location.create(name: "scarab brooch", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595433225/Room1/Scarab_eplx8o.png", positionX: 40, positionY: 70, size: 20)
 
 homeLocation = home.locations.create(name: "home")
 
+shelf = Location.create(name: "shelf", room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425469/Room1/800px_COLOURBOX6860246_jjj47r.png", positionX: 20, positionY: 65, size: 17 )
+book1 = Item.create(name: "Evidential Reasoning in Archaeology", location: shelf, description: "Just the history of the study of archaeology... nothing to see here", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.44_PM_nncx01.png")
+book2 = Item.create(name: "The Woman Who Would Be King", location: shelf, description: "Is there a page bookmarked in here? Looks like Tess wanted to remember something about Queen Hatshepsut's mother", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.10_PM_mp38iv.png")
+book3 = Item.create(name: "Ancient Egyptian Rulers", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
 
 
 firstClue = homeLocation.items.create(name: "Looks like there are some footprints over there...")
