@@ -49,28 +49,46 @@ userstory1 = UserStory.create(user: caroline, story: hatshepsut, progress: "0")
 
 #Room1
 
+puts "Loading Room 1..."
+
 tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594929784/Room1/Screen_Shot_2020-07-16_at_12.37.17_PM_stmsht.png")
 home = Room.create(name: "home", story: hatshepsut)
 
 userRoom1 = UserRoom.create(user: caroline, room: tent, complete?: false, characterSpoken?: false, cluesFound?: false)
 
-shelf = Location.create(name: "shelf", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595352641/Room1/book-shelf-template-color-vector-21267974_rbu6gh.png", positionX: 65, positionY: 55, size: 30 )
-footprints = Location.create(name: "footprints", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594916847/Room1/footsteps_lslhwm.png", positionX: 85, positionY: 1, size: 30)
-chest = Location.create(name: "chest", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594936185/Room1/Screen_Shot_2020-07-16_at_12.10.27_PM_git3gj.png", positionX: 20, positionY: 5, size: 15)
-hookah = Location.create(name: "hookah", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594915670/Room1/hookah-clipart-vectorportal_pbrghh.png", positionX: 60, positionY: 2, size: 25)
+shelf = Location.create(name: "shelf", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425469/Room1/800px_COLOURBOX6860246_jjj47r.png", positionX: 20, positionY: 65, size: 17 )
+book1 = Item.create(name: "Evidential Reasoning in Archaeology", location: shelf, description: "Just the history of the study of archaeology... nothing to see here", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.44_PM_nncx01.png")
+book2 = Item.create(name: "The Woman Who Would Be King", location: shelf, description: "Is there a page bookmarked in here? Looks like Tess wanted to remember something about Queen Hatshepsut's mother", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.10_PM_mp38iv.png")
+book3 = Item.create(name: "Ancient Egyptian Rulers", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
+
+table = Location.create(name: "table", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427993/Room1/arabic-coffee-table-ethnic-traditional-moroccan-vector-24182980_oav30i.png", positionX: 38, positionY: 7, size: 25)
+hookah = Item.create(name: "Hookah", location: table, description: "Looks like there are some lipstick marks on the tip", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425946/Room1/Screen_Shot_2020-07-22_at_9.50.01_AM_wrcjxz.png")
+book = Item.create(name: "Tess's Journal", location: table, description: "This looks like Tess's journal. It looks like she was recording developments in the dig in it", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425774/Room1/Screen_Shot_2020-07-22_at_9.48.42_AM_b1cn43.png")
+catStatue = Item.create(name: "Cat statue", location: table, description: "You know the Egyptians used to worship cats. They were believed to be magical creatures that brought luck to the people that housed them.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595433225/Room1/Cat_statue_rjk9ka.png")
+
+luggage = Location.create(name: "suitcase", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425642/Room1/old-brown-traveler-suitcase-vintage-leather-bag-vector-23609530_sl3skk.png", positionX: 90, positionY: 2, size: 15)
+footprints = Item.create(name: "Medium-ish footprints", location: luggage, description: "The print size definitely looks like it belongs to a woman", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594916847/Room1/footsteps_lslhwm.png")
+pillow = Item.create(name: "Plush velvet pillow", location: luggage, description: "Does this pillow feel warm to you?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425602/Room1/blue-velvet-pillow-with-gold-rope-and-tassels-vector-illustration_ndforl.png")
+purse = Item.create(name: "Tess's wallet", location: luggage, description: "Tess's suitcase is fully packed and her wallet is full of money. Was she planning on going somewhere?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595432930/Room1/Screen_Shot_2020-07-22_at_11.09.53_AM_vl0hcn.png")
+
+lantern = Location.create(name: "lantern", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425539/Room1/islamic-style-colored-lantern-design-vector-20967979_k3gb7h.png", positionX: 82, positionY:75 , size: 5)
+note = Item.create(name: "A note! Hidden in the lantern! What does it say?", location: lantern, description: "It just says... 'The priest did it'", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595429221/Room1/Screen_Shot_2020-07-22_at_10.46.13_AM_kid1cf.png")
+
+scarab = Location.create(name: "scarab brooch", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595433225/Room1/Scarab_eplx8o.png", positionX: 50, positionY: 70, size: 20)
 
 homeLocation = home.locations.create(name: "home")
 
-book1 = Item.create(name: "archaeology book", location: shelf, description: "Just the history of the study of archaeology... nothing to see here", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.44_PM_nncx01.png")
-book2 = Item.create(name: "bookmarked book", location: shelf, description: "A clue!", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.01.43_PM_lkhuzn.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.33_PM_ifmvym.png")
-book3 = Item.create(name: "pharaoh book", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
+
 
 firstClue = homeLocation.items.create(name: "Looks like there are some footprints over there...")
 cluelist1.items.create(name: "Looks like there are some footprints over there...", location_id: Location.find_by(name: "home"))
 # Character
 
-
-guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egyptian guide that has been helping your team make its way through the sands burying the lost tomb of Hatshepsut.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595298441/Room1/Screen_Shot_2020-07-20_at_10.24.52_PM_q99q5s.png")
+puts "Loading Characters"
+guide = Character.create(name: "Atif Mostafa", room: tent, 
+        description: "Atif is the Egyptian guide that has been helping your team make its way through the sands 
+        burying the lost tomb of Hatshepsut.", 
+        image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595298441/Room1/Screen_Shot_2020-07-20_at_10.24.52_PM_q99q5s.png")
 # GUIDE CHAT
 
     guidechat1 = Chat.create(character: guide, response: "It's such a pity to lose such a great woman. She was like a mother to me....I have to know who did it. Since you and her were, you know, an 'item', I feel like you could have some really helpful insight. Will you help me?")
@@ -107,7 +125,7 @@ guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egy
     guidechat4.chat_options.create(text: "Sounds lazy, but ok.", nextResponse_id: guidechat5.id)
     guidechat4.chat_options.create(text: "Ah, well, that makes sense.", nextResponse_id: guidechat5.id)
 
-    guidechat5.chat_options.create(text: "Great. How did you know her?", nextResponse_id: guidechat6.id)
+    guidechat5.chat_options.create(text: "That's fair. Back to the murder at hand... Can you tell me how you knew Tess?", nextResponse_id: guidechat6.id)
 
     guidechat6.chat_options.create(text: "It's interesting that you're working as a guide when you've got such a distinguished PhD isn't it?", nextResponse_id: guidechat7.id)
 
@@ -149,3 +167,12 @@ guide = Character.create(name: "Atif", room: tent, description: "Atif is the Egy
     guidechat21.chat_options.create(text: "I can ask around.")
 
     guidechat22.chat_options.create(text: "Do you know anything about her recent whereabouts?", nextResponse_id: guidechat16.id)
+
+husband = Character.create(name: "Lord Kit Sharp" , room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427464/Hatshepsut/Screen_Shot_2020-07-22_at_9.57.37_AM_yn6py2.png")
+wife = Character.create(name: "Lady Amelia Sharp", room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427361/Hatshepsut/beautiful-archaeologist-woman-standing-with-vector-19592498_kyrmpv.png")
+colleague = Character.create(name: "Riccardo Bonardi", room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595429908/Hatshepsut/Screen_Shot_2020-07-22_at_10.57.50_AM_bcdytx.png")
+actress = Character.create(name: "Isra Hassan", room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427467/Hatshepsut/Screen_Shot_2020-07-22_at_10.07.05_AM_swxlks.png")
+museumhead = Character.create(name: "Gael Vergara", room: home, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595429657/Hatshepsut/Screen_Shot_2020-07-22_at_10.53.52_AM_pafki3.png")
+
+hatshepsutGhost = Character.create(name: "Queen Hatshepsut" , room: home, image_url: "")
+victim = Character.create(name: "Tess" , room: home, image_url: "")
