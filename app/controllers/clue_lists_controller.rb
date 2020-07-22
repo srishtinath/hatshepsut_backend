@@ -14,12 +14,12 @@ class ClueListsController < ApplicationController
         render json: @cluelist, include: [:items]
     end
 
-    def addItem
-        @foundEntry = ClueList.find(params[:id])
-        newItem = @foundEntry.items.create(id: params[:item_id])
-        byebug
-        render json: @foundEntry.items
-    end
+    # def addItem
+    #     @foundEntry = ClueList.find(params[:id])
+    #     newItem = @foundEntry.items.create(id: params[:item_id])
+    #     byebug
+    #     render json: @foundEntry.items
+    # end
     
     def deleteItem
         @foundEntry = ClueList.find(params[:id])
