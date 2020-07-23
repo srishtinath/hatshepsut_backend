@@ -7,7 +7,7 @@ class UserRoomsController < ApplicationController
     end
     def create
         @userRoom = UserRoom.create(userRoomParams)
-        render json: @userRoom.room
+        render json: @userRoom
     end
 
     private
