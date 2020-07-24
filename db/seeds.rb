@@ -52,14 +52,22 @@ userstory1 = UserStory.create(user: caroline, story: hatshepsut, progress: "0")
 puts "Loading Rooms"
 
 # tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594929784/Room1/Screen_Shot_2020-07-16_at_12.37.17_PM_stmsht.png")
-tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536073/Room1/Screen_Shot_2020-07-22_at_1.58.37_PM_ubwide.png")
-entrance = Room.create(name: "outside", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png")
-digsite = Room.create(name: "dig", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png")
-dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png")
-pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png")
-pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png")
-pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png")
-treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png")
+tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536073/Room1/Screen_Shot_2020-07-22_at_1.58.37_PM_ubwide.png",
+        description: "Looks like this was Tess's tent. Click around and see if you can find any clues.")
+entrance = Room.create(name: "outside", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png",
+    description: "")
+digsite = Room.create(name: "dig", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png",
+    description: "")
+dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
+    description: "")
+pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png",
+    description: "")
+pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png",
+    description: "")
+pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png",
+    description: "")
+treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png",
+    description: "")
 
 puts "Loading Room 1 Content"
 table = Location.create(name: "table", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427993/Room1/arabic-coffee-table-ethnic-traditional-moroccan-vector-24182980_oav30i.png", positionX: 23, positionY: 20, size: 10)
