@@ -53,13 +53,13 @@ puts "Loading Rooms"
 
 # tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594929784/Room1/Screen_Shot_2020-07-16_at_12.37.17_PM_stmsht.png")
 tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536073/Room1/Screen_Shot_2020-07-22_at_1.58.37_PM_ubwide.png")
-entrance = Room.create(name: "Entrance towards dig site", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png")
-digsite = Room.create(name: "Dig Site", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png")
-dreamSequence = Room.create(name: "Was it a dream after all?", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png")
-pyramidroom1 = Room.create(name: "Pyramid Room 1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png")
-pyramidroom2 = Room.create(name: "Pyramid Room 2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png")
-pyramidroom3 = Room.create(name: "Pyramid Room 3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png")
-treasureroom = Room.create(name: "Treasure Room", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png")
+entrance = Room.create(name: "outside", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png")
+digsite = Room.create(name: "dig", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png")
+dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png")
+pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png")
+pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png")
+pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png")
+treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png")
 
 puts "Loading Room 1 Content"
 table = Location.create(name: "table", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427993/Room1/arabic-coffee-table-ethnic-traditional-moroccan-vector-24182980_oav30i.png", positionX: 23, positionY: 20, size: 10)
@@ -89,7 +89,8 @@ puts "Loading Guide"
 guide = Character.create(name: "Atif Mostafa", room: tent, 
         description: "Atif is the Egyptian guide that has been helping your team make its way through the sands 
         burying the lost tomb of Hatshepsut.", 
-        image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544282/Hatshepsut/Screen_Shot_2020-07-20_at_10.24.52_PM_nsaknl.png")
+        image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544282/Hatshepsut/Screen_Shot_2020-07-20_at_10.24.52_PM_nsaknl.png", 
+        display: true)
 # GUIDE CHAT
 
     guidechat1 = Chat.create(character: guide, response: "It's such a pity to lose such a great woman. She was like a mother to me....I have to know who did it. Since you and her were, you know, an 'item', I feel like you could have some really helpful insight. Will you help me?")
@@ -169,19 +170,15 @@ guide = Character.create(name: "Atif Mostafa", room: tent,
 
     guidechat22.chat_options.create(text: "Do you know anything about her recent whereabouts?", nextResponse_id: guidechat16.id)
 
-husband = Character.create(name: "Lord Kit Sharp" , room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544834/Hatshepsut/Screen_Shot_2020-07-22_at_9.57.37_AM_clweul.png")
-wife = Character.create(name: "Lady Amelia Sharp", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544258/Hatshepsut/beautiful-archaeologist-woman-standing-with-vector-19592498_s6asgn.png")
-colleague = Character.create(name: "Riccardo Bonardi", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544664/Hatshepsut/Screen_Shot_2020-07-23_at_6.39.47_PM_rzzliv.png")
+husband = Character.create(name: "Lord Kit Sharp" , room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544834/Hatshepsut/Screen_Shot_2020-07-22_at_9.57.37_AM_clweul.png", display: true)
+wife = Character.create(name: "Lady Amelia Sharp", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544258/Hatshepsut/beautiful-archaeologist-woman-standing-with-vector-19592498_s6asgn.png", display: true)
+colleague = Character.create(name: "Riccardo Bonardi", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544664/Hatshepsut/Screen_Shot_2020-07-23_at_6.39.47_PM_rzzliv.png", display: true)
 
 puts "Loading Actress"
-actress = Character.create(name: "Isra Hassan", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544249/Hatshepsut/retro-character-attractive-caucasian-actress-vector-2598369_ffyc8p.png")
+actress = Character.create(name: "Isra Hassan", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544249/Hatshepsut/retro-character-attractive-caucasian-actress-vector-2598369_ffyc8p.png", display: true)
 
+museumhead = Character.create(name: "Gael Vergara", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544272/Hatshepsut/Screen_Shot_2020-07-22_at_10.53.52_AM_lioeot.png", display: true)
 
-
-
-
-museumhead = Character.create(name: "Gael Vergara", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595544272/Hatshepsut/Screen_Shot_2020-07-22_at_10.53.52_AM_lioeot.png")
-
-hatshepsutGhost = Character.create(name: "Queen Hatshepsut" , room: dreamSequence, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595266742/Hatshepsut/Screen_Shot_2020-07-20_at_1.37.59_PM_rhw9xf.png")
+hatshepsutGhost = Character.create(name: "Queen Hatshepsut" , room: dreamSequence, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595266742/Hatshepsut/Screen_Shot_2020-07-20_at_1.37.59_PM_rhw9xf.png", display: false)
 hatshepsutGhost2 = Character.create(name: "Queen Hatshepsut" , room: treasureroom, image_url: "")
-victim = Character.create(name: "Tess" , room: treasureroom, image_url: "")
+victim = Character.create(name: "Tess Ali" , room: treasureroom, image_url: "", display: true)

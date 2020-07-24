@@ -1,5 +1,5 @@
 class CharacterSerializer < ActiveModel::Serializer
-    attributes :id, :name, :description, :chats, :room, :image_url
+    attributes :id, :name, :description, :chats, :room, :image_url, :display
     # has_many :chats
     def chats
         object.chats.map do |chat|
