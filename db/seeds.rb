@@ -53,17 +53,8 @@ puts "Loading Rooms"
 
 # tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594929784/Room1/Screen_Shot_2020-07-16_at_12.37.17_PM_stmsht.png")
 
-
-dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
-    description: "")
-pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png",
-    description: "")
-pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png",
-    description: "")
-treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png",
-    description: "")
-
 puts "Loading Room 1 Content"
+# Guide
     tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536073/Room1/Screen_Shot_2020-07-22_at_1.58.37_PM_ubwide.png",
         description: "Looks like this was Tess's tent. Click around and see if you can find any clues.")
 
@@ -76,9 +67,15 @@ puts "Loading Room 1 Content"
     footprints = Item.create(name: "Medium-ish footprints", location: luggage, description: "The print size definitely looks like it belongs to a woman", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704104/Items/Footsteps2_ybjc78.png")
     pillow = Item.create(name: "Plush velvet pillow", location: luggage, description: "Does this pillow feel warm to you?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425602/Room1/blue-velvet-pillow-with-gold-rope-and-tassels-vector-illustration_ndforl.png")
     purse = Item.create(name: "Tess's wallet", location: luggage, description: "Tess's suitcase is fully packed and her wallet is full of money. Was she planning on going somewhere?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595432930/Room1/Screen_Shot_2020-07-22_at_11.09.53_AM_vl0hcn.png")
-
+    
     lantern = Location.create(name: "lantern", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595425539/Room1/islamic-style-colored-lantern-design-vector-20967979_k3gb7h.png", positionX: 68, positionY:75 , size: 5)
-    note = Item.create(name: "A note! Hidden in the lantern! What does it say?", location: lantern, description: "It just says... 'The priest did it'", image_url: "")
+    note = Item.create(name: "A note! Hidden in the lantern! What does it say?", location: lantern, description: "It just says... 'The priest did it'", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/SecretNote_wtrodv.png")
+    
+    teapot = Location.create(name: "I'm a little teapot short and stout", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Teapot_pxdme5.png", positionX: 50, positionY: 17, size: 5)
+    dessert1 = Item.create(name: "Dessert1", location: teapot, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Dessert1_yson3l.png")
+    dessert2 = Item.create(name: "Dessert2", location: teapot, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Dessert3_pw5rtq.png")
+    dessert3 = Item.create(name: "Dessert3", location: teapot, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Dessert2_hhdhm3.png")
+    wine = Item.create(name: "Alcohol", location: teapot, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Alcohol3_l1tudl.png")
 
     scarab = Location.create(name: "scarab brooch", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Scarab_statue_atiep5.png", positionX: 87, positionY: 80, size: 10)
 
@@ -88,28 +85,110 @@ puts "Loading Room 1 Content"
 # book3 = Item.create(name: "Ancient Egyptian Rulers", location: shelf, description: "A book on our current understanding of pharaohs", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937180/Room1/Screen_Shot_2020-07-16_at_6.02.01_PM_qjor5w.png", image_url2: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1594937477/Room1/Screen_Shot_2020-07-16_at_6.10.03_PM_bcqzid.png")
 
 puts "Loading Room 2 Content"
+# Actress
     entrance = Room.create(name: "outside", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png",
         description: "")
 
-    palmtree = Location.create(name: "Palm Trees", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698648/Items/Palm_Tree_lxhbtr.png", positionX: 0, positionY: 0, size: 80)
-    camelRider = Location.create(name: "Camel-riding guide", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Guide_on_Camel_fjmbn5.png", positionX: 10, positionY: 10, size: 60)
+    palmtree = Location.create(name: "Palm Trees", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698648/Items/Palm_Tree_lxhbtr.png", positionX: 85, positionY: 44, size: 15)
+    camelRider = Location.create(name: "Camel-riding guide", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Guide_on_Camel_fjmbn5.png", positionX: 35, positionY: 40, size: 8)
 # Character
 
 puts "Loading Room 3 Content"
+# Colleague
     digsite = Room.create(name: "dig", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png",
         description: "")
-    pickaxeboy = Location.create(name: "Nathaniel Digger", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704079/Items/Arch_boy_anwynk.png", positionX: 0, positionY: 0, size: 70)
-    camel = Location.create(name: "A beautiful camel", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704088/Items/Camel_b2djbw.png", positionX: 0, positionY: 0, size: 70)
-    obelisk = Location.create(name: "Obelisk", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Obelisk_um1mzj.png", positionX: 0, positionY: 0, size: 70)
+    pickaxeboy = Location.create(name: "Nathaniel Digger", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704079/Items/Arch_boy_anwynk.png", positionX: 85, positionY: -10, size: 30)
+    camel = Location.create(name: "A beautiful camel", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704088/Items/Camel_b2djbw.png", positionX: 30, positionY: 29, size: 70)
+    obelisk = Location.create(name: "Obelisk", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Obelisk_um1mzj.png", positionX: 3, positionY: 25, size: 6)
 
 puts "Loading Room 4 Content"
-    pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png",
+# Husband
+pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png",
     description: "")
-    mysterychest = Location.create(name: "Mysterious Chest", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Mysterious_Chest_zqavph.png", positionX: 0, positionY: 0, size: 80 )
-    horus = Location.create(name: "Horus Glyph", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Horus_wpg4nd.png", positionX: 0, positionY: 0, size: 80 )
-    theCrowning = Location.create(name: "Papyrus of the Ascension", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Papyrus1_dde7sa.png", positionX: 0, positionY: 0, size: 80 )
+    mysterychest = Location.create(name: "Mysterious Chest", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Mysterious_Chest_zqavph.png", positionX: 80, positionY: 30, size: 15 )
+    jewels = Item.create(name: "Some fancy jewels", location: mysterychest, description: "These are some very very expensive gems!", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698643/Items/Gems_uokpvx.png")
+    burialMask = Item.create(name: "Burial Mask", location: mysterychest, description: "Burial Mask", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Burial_Mask_j6xpth.png" )
+    
+    # firething = Location.create(name: "Fire thing", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Torch_hetnmj.png", positionX: 85, positionY: 15, size: 10)
 
-puts "Loading Guide and Chat"
+    satchel = Location.create(name: "Satchel", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Satchel_oxvmsx.png", positionX: 2, positionY: 3, size: 10)
+    papyrus = Item.create(name: "Papyrus", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Papyrus3_ovhmfs.png")
+    books = Item.create(name: "Some books?", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Book2_pcmv1n.png")
+    canopicJar2 = Item.create(name: "Canopic jar containing organs", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Remains2_pfsk8c.png")
+    ankh = Item.create(name: "Ankh", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595625907/Items/Ankh-complete_choj5m.png")
+     
+    vasesOnTable = Location.create(name:"Fancy Vases wow", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/FancyVasesOnTable_xbdxuu.png", positionX: 40, positionY: 20, size: 17)
+    whips = Item.create(name: "Watch me whip", location: vasesOnTable, description: "Watch me nay nay", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789632/Items/Whip_iuvjux.png")
+    money = Item.create(name: "Gold! You're rich!!", location: vasesOnTable, description: "Not that you weren't already", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Treasure2_n9zpdn.png")
+
+    tablet = Location.create(name: "Tablet", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Tablet_dwozlv.png", positionX: 85, positionY: 85, size: 3)
+ 
+puts "Loading Room 5 Content"
+dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
+    description: "")
+    
+puts "Loading Room 6 Content"
+pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png",
+    description: "")
+    # Wife
+    horus = Location.create(name: "Horus Glyph", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Horus_wpg4nd.png", positionX: 75, positionY: 50, size: 3 )
+    
+    wallglyphs = Location.create(name: "Wall Glyphs", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595806276/Items/Heiroglyphblendcolor_xvp8cf.png", positionX: 25, positionY: 43, size: 10 )
+    theCrowning = Item.create(name: "Papyrus of the Ascension", location: wallglyphs, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Papyrus1_dde7sa.png")
+    
+    wallglyphs2 = Location.create(name: "Some More Wall Glyphs!", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595806276/Items/Heiroglyphblendcolor_xvp8cf.png", positionX: 15, positionY: 66, size: 18 )
+    
+    
+    # vase2 = Location.create(name: "Fancy vase", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704103/Items/Fancy_Vase_sojrly.png", positionX: 0, positionY: 0, size: 55)
+    
+    
+puts "Loading Room 7 Content"
+pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png",
+    description: "")
+        #Museum
+    
+    vase1 = Location.create(name: "Simple black vase", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698652/Items/Vase_wfrsjm.png", positionX: 72, positionY: -5, size: 8)
+    inkpot = Item.create(name: "A pot of ink", location: vase1, description: "Strange place to find some ink, don't you think?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704175/Items/Inkpot_zuljfu.png" )
+    vial = Item.create(name: "A vial? Could it be poison?", location: vase1, description: "Vial of mysterious stuff", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789631/Items/Vial_p7kow5.png" )
+    
+    
+    anotherChest = Location.create(name: "Chest", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789631/Items/TreasureChest_hqjrog.png", positionX: 40, positionY: 4, size: 10)
+    mummy = Item.create(name: "Mummy!", location: anotherChest, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789629/Items/Mummy_moywwo.png")
+    goldpieces = Item.create(name: "Gold pieces", location: anotherChest, description: "GOLD", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Treasure_qbhj3b.png" )
+    falconStatue = Item.create(name: "Falcon", location: anotherChest, description: "Falcon", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Falconstatue_bh4nuk.png" )
+    # Egyptian Book of the Dead
+    # Cursed Amulet
+    # Furniture
+    # Food
+    # Ushabti figurines
+    # Boat / chariot
+    # Oils / ointments
+    # Weapons - vial of poison found
+    # Baset / Senet - game
+    # live cat
+    # Burial mask
+    # Anubis statue - ferried souls to the afterlife
+    # Fan
+    # Perfume
+    #Karnak depcition
+    # "    The crook (heka) and flail (nekhakha) are symbols used in Ancient Egyptian society. They were originally the attributes of the deity Osiris that became insignia of pharaonic authority.[1] The shepherd's crook stood for kingship and the flail for the fertility of the land.[1]"
+    
+puts "Loading Room 8 Content"
+treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png",
+    description: "")
+    canopicJar = Location.create(name: "Organs of the deceased", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Remains3_spgynp.png", positionX: 50, positionY: -5, size: 6)
+    goldGoblet = Location.create(name: "It's pure GOLD", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Goblet2_vyp0nc.png", positionX: 30, positionY: 10, size: 7)
+        
+    journeyScroll = Location.create(name: "Journey to Punt", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/SecretNote_wtrodv.png", positionX: 78, positionY: 8, size: 8)
+    fancyScroll = Item.create(name: "Journey to Pun", location: journeyScroll, description: "Fancy scroll wow", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704175/Items/JourneytoPuntScroll_qq639z.png" )
+    chariot = Item.create(name: "Chariot", location: journeyScroll, description: "Chariot", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Chariot_a0qpq7.png" )
+
+    treasureWow = Location.create(name: "Wow gold!", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Treasure_qbhj3b.png", positionX: 40, positionY: 0, size: 10)
+    snek = Item.create(name: "Snek", location: treasureWow, description: "SNEKKKKKKK", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Snek_gkdnpn.png" )
+    
+    catStatueAgain = Location.create(name: "They really liked cats ok?", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Cat_l8ubfo.png", positionX: 30, positionY: 0, size: 4)
+
+    puts "Loading Guide and Chat"
 guide = Character.create(name: "Atif Mostafa", room: tent, 
         description: "Atif is the Egyptian guide that has been helping your team make its way through the sands 
         burying the lost tomb of Hatshepsut.", 
