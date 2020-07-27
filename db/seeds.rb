@@ -56,7 +56,7 @@ puts "Loading Rooms"
 puts "Loading Room 1 Content"
 # Guide
     tent = Room.create(name: "tent", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536073/Room1/Screen_Shot_2020-07-22_at_1.58.37_PM_ubwide.png",
-        description: "Looks like this was Tess's tent. Click around and see if you can find any clues.")
+        description: "Looks like this was Tess's tent. Click around and see if you can find any clues.", display: true)
 
     table = Location.create(name: "table", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595427993/Room1/arabic-coffee-table-ethnic-traditional-moroccan-vector-24182980_oav30i.png", positionX: 23, positionY: 20, size: 10)
     hookah = Item.create(name: "Hookah", location: table, description: "Looks like there are some lipstick marks on the tip", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595695487/Room1/Hookah_image_wtstux.png")
@@ -87,7 +87,7 @@ puts "Loading Room 1 Content"
 puts "Loading Room 2 Content"
 # Actress
     entrance = Room.create(name: "outside", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536296/Hatshepsut/Post_Dig_Site_uoyr8j.png",
-        description: "")
+        description: "", display: true)
 
     palmtree = Location.create(name: "Palm Trees", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698648/Items/Palm_Tree_lxhbtr.png", positionX: 85, positionY: 44, size: 15)
     camelRider = Location.create(name: "Camel-riding guide", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Guide_on_Camel_fjmbn5.png", positionX: 35, positionY: 40, size: 8)
@@ -96,7 +96,7 @@ puts "Loading Room 2 Content"
 puts "Loading Room 3 Content"
 # Colleague
     digsite = Room.create(name: "dig", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536317/Hatshepsut/Dig_Site_opzbkl.png",
-        description: "")
+        description: "", display: true)
     pickaxeboy = Location.create(name: "Nathaniel Digger", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704079/Items/Arch_boy_anwynk.png", positionX: 85, positionY: -10, size: 30)
     camel = Location.create(name: "A beautiful camel", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704088/Items/Camel_b2djbw.png", positionX: 30, positionY: 29, size: 70)
     obelisk = Location.create(name: "Obelisk", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Obelisk_um1mzj.png", positionX: 3, positionY: 25, size: 6)
@@ -104,7 +104,7 @@ puts "Loading Room 3 Content"
 puts "Loading Room 4 Content"
 # Husband
 pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536171/Hatshepsut/Pyramid_Room_3_vux5nr.png",
-    description: "")
+    description: "", display: true)
     mysterychest = Location.create(name: "Mysterious Chest", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Mysterious_Chest_zqavph.png", positionX: 80, positionY: 30, size: 15 )
     jewels = Item.create(name: "Some fancy jewels", location: mysterychest, description: "These are some very very expensive gems!", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698643/Items/Gems_uokpvx.png")
     burialMask = Item.create(name: "Burial Mask", location: mysterychest, description: "Burial Mask", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Burial_Mask_j6xpth.png" )
@@ -125,11 +125,11 @@ pyramidroom1 = Room.create(name: "PyramidRoom1", story: hatshepsut, image_url: "
  
 puts "Loading Room 5 Content"
 dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
-    description: "")
+    description: "", display: false)
     
 puts "Loading Room 6 Content"
 pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png",
-    description: "")
+    description: "", display: true)
     # Wife
     horus = Location.create(name: "Horus Glyph", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Horus_wpg4nd.png", positionX: 75, positionY: 50, size: 3 )
     
@@ -144,7 +144,7 @@ pyramidroom2 = Room.create(name: "PyramidRoom2", story: hatshepsut, image_url: "
     
 puts "Loading Room 7 Content"
 pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536232/Hatshepsut/Pyramid_Room_1_slnppz.png",
-    description: "")
+    description: "", display: true)
         #Museum
     
     vase1 = Location.create(name: "Simple black vase", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698652/Items/Vase_wfrsjm.png", positionX: 72, positionY: -5, size: 8)
@@ -175,7 +175,7 @@ pyramidroom3 = Room.create(name: "PyramidRoom3", story: hatshepsut, image_url: "
     
 puts "Loading Room 8 Content"
 treasureroom = Room.create(name: "TreasureRoom", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595542897/Hatshepsut/Treasure_Room_2_ebnfpv.png",
-    description: "")
+    description: "", display: true)
     canopicJar = Location.create(name: "Organs of the deceased", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Remains3_spgynp.png", positionX: 50, positionY: -5, size: 6)
     goldGoblet = Location.create(name: "It's pure GOLD", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789628/Items/Goblet2_vyp0nc.png", positionX: 30, positionY: 10, size: 7)
         
