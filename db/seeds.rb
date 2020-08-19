@@ -304,7 +304,118 @@ colleaguechat = Chat.create(character: colleague, response: "Well, hello, darlin
 
 puts "Loading Actress"
 actress = Character.create(name: "Isra Hassan", room: entrance, description: "The venerable Miss Isra Hassan is a famous Lebanese actress. You're lucky she's graced you all with her presence! Not sure what she's doing on an archaeological expedition exactly, but who's to complain when she's got such star power?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595702957/Characters/Actress2_bwsb9q.png", display: true)
-actresschat1 = Chat.create(character: actress, response: "Well, hello, darling, how are you doing on this fine day?")
+    actresschat1 = Chat.create(character: actress, response: "Hello, there! How's it going?")
+    actresschat2 = Chat.create(character: actress, response: "Murdered??? What makes you say that?")
+    actresschat3 = Chat.create(character: actress, response: "And mine, as well. I dare say, I've known her far longer than anyone else in our troupe.")
+    actresschat4 = Chat.create(character: actress, response: "(She laughs). How old do you think I am, dear?")
+    actresschat5 = Chat.create(character: actress, response: "(She laughs heartily). I do appreciate your attempts to appease my vanity, my dear.")
+    actresschat6 = Chat.create(character: actress, response: "Definitely closer. ")
+    actresschat7 = Chat.create(character: actress, response: "Professor, are you flirting with me?")
+    actresschat8 = Chat.create(character: actress, response: "Longingly? Am I hearing you say... let's find an oasis of our own?")
+    actresschat9 = Chat.create(character: actress, response: "Please, call me Isra.")
+    actresschat10 = Chat.create(character: actress, response: "With my looks and talent, I dare say I agree. Tell me, weren't you and Tess, an item, as they say?")
+    actresschat11 = Chat.create(character: actress, response: "Ooh, touchy, touchy. Don't mind me, Professor, you know how I love to gossip.")
+    actresschat12 = Chat.create(character: actress, response: "That's a very coy way of putting it, isn't it? If it puts you at ease, I myself had a very torrid affair with Ricky.")
+    actresschat13 = Chat.create(character: actress, response: "Maybe not, but here we are nonetheless. Tess didn't approve, of course. I thought she was very much against mixing business with pleasure, but I guess she was just against mixing his business with my pleasure.")
+    actresschat14 = Chat.create(character: actress, response: "Don't worry, I won't go telling anyone. To tell you the truth, I don't think Ricky liked her much either.")
+    actresschat15 = Chat.create(character: actress, response: "Well, Riccardo, as head of the British Museum, wanted all of the spoils to go to his department; Tess, as an Egyptian national, was offended that her country's illustrative history would be looted for colonist benefit, yet again. That's what happened with the Rosetta Stone after all; it was discovered in these parts but is now in the possession of the British Museum. You know Tess did not like that.")
+    actresschat16 = Chat.create(character: actress, response: "Why do you ask that?")
+    actresschat17 = Chat.create(character: actress, response: "Are you suggesting that Ricky had something to do with it? He's harmless, he wouldn't hurt a fly.")
+    actresschat18 = Chat.create(character: actress, response: "A few months, about. But I have a woman's intuition about this kind of thing. He balances out my more... temperamental tendencies.")
+    actresschat19 = Chat.create(character: actress, response: "Well, my agent suggested I take a bit of a break from my career in Lebanon due to some unfortunate run-ins with some paparazzi. Tess heard and she offered to let me join you all.")
+    actresschat20 = Chat.create(character: actress, response: "I swear on my mother's grave. Although, as a Muslim, my mother would hang her head in shame at me, but c'est la vie.")
+    actresschat21 = Chat.create(character: actress, response: "She did think he was going to the Egyptian equivalent of hell. She is, I'm sorry, excuse me, she was, a Kemetist, and believed in the ancient gods, from the Sun God Ra, to Osiris and Isis, Horus, Bast, Nepthys, and the rest of them. That's why she was so good at her job. Anyway, because he's planning on violating the tombs of pharaohs, who are the divine messengers, she believes he's going to hell.")
+    actresschat22 = Chat.create(character: actress, response: "Not one bit. His Christian beliefs were nary to be questioned.")
+    actresschat23 = Chat.create(character: actress, response: "We went to primary school together! Many, many years ago.")
+    actresschat24 = Chat.create(character: actress, response: "You're very welcome. It sounds like you're becoming the Lead Detective on this case eh? In that case, I should tell you, I did see the good Lady enter Tess's tent last night as I was leaving. I'm not sure for what exactly, but with the outpouring of librations, who knows what happened?")
+    actresschat25 = Chat.create(character: actress, response: "That's categorically untrue. They were nothing but cordial to each other, with their simmering hatred for each other's values only penned in secrecy. ")
+    actresschat26 = Chat.create(character: actress, response: "It's dangerous to spread false rumors. I'd be careful if I were you.")
+    actresschat27 = Chat.create(character: actress, response: "Professor, I'm an extremely intuitive woman, as my career demands of me. Neither Tess nor Ricky would look to save my feelings in that way.")
+    actresschat28 = Chat.create(character: actress, response: "I'll thank you to not insinuate anything you don't know about, Professor.")
+    actresschat29 = Chat.create(character: actress, response: "She does keep it on the down low for the most part. I think she realizes how little credibility her work would get if word got out.")
+    actresschat30 = Chat.create(character: actress, response: "Hmm, I wonder if Ricky would know anything about that.")
+    actresschat31 = Chat.create(character: actress, response: "I don't mind it now. I got to spend some time with my beautiful Tess and Riccardo, and get a little tan going in this desert sun. What more can any woman ask for?")
+    actresschat32 = Chat.create(character: actress, response: "You're very welcome. It sounds like you're becoming the Lead Detective on this case eh? In that case, I should tell you, I did see the good Lady enter Tess's tent last night as I was leaving. I'm not sure for what exactly, but it didn't sound like they were in agreement at the moment.")
+    actresschat33 = Chat.create(character: actress, response: "It was just the Lady. I'll let you in on something, though. It turns out they had something you call an 'open relationship.' Now, I don't know what that means, but maybe Tess might have been able to.")
+    actresschat34 = Chat.create(character: actress, response: "I'm sure the Lord and Lady would be inclined to agree.")
+    actresschat35 = Chat.create(character: actress, response: "Well, I'm sure if you ask the Lady she might be prevailed on to answer your questions. ")
+    actresschat36 = Chat.create(character: actress, response: "I can't say I have an answer to that question, despite the many answers I've been looking for.")
+    actresschat37 = Chat.create(character: actress, response: "Oh, most definitely.")
+    actresschat38 = Chat.create(character: actress, response: "I really couldn't tell you, unfortunately.")
+    
+    actresschat1.chat_options.create(text: "Not too well. It appears Miss Ali was murdered.", nextResponse_id: actresschat2.id)
+    actresschat1.chat_options.create(text: "I'm afraid I'm completely heartbroken. Miss Ali was a wonderful friend of mine.", nextResponse_id: actresschat3.id)
+
+    actresschat2.chat_options.create(text: "Well, it looks like she died of a heart attack. But a suicide note was discovered, which Atif thinks is fake. I know she was of ill health, but still, it makes one wonder.", nextResponse_id: actresschat30.id)
+    
+    actresschat3.chat_options.create(text: "I thought she was like a mother to Mr. Mostafa. I imagine they've known each other quite a while.", nextResponse_id: actresschat4.id)
+    actresschat3.chat_options.create(text: "You are the luckiest of us all, ma'am.", nextResponse_id: actresschat10.id)
+    
+    actresschat4.chat_options.create(text: "3.....7?", nextResponse_id: actresschat5.id)
+    actresschat5.chat_options.create(text: "So... closer to 45?", nextResponse_id: actresschat6.id)
+    actresschat5.chat_options.create(text: "No placation! You are genuinely beautiful and youthful looking!", nextResponse_id: actresschat6.id)
+    actresschat6.chat_options.create(text: "Is there anyone in your life, Miss Hassan?", nextResponse_id: actresschat7.id)
+    actresschat7.chat_options.create(text: "You know Brits don't flirt. They stare longingly from a distance and make witty sarcastic remarks.", nextResponse_id: actresschat8.id)
+    actresschat8.chat_options.create(text: "I would love for you to lead the way, Miss Hassan.", nextResponse_id: actresschat9.id)
+    actresschat9.chat_options.create(text: "Gladly.")
+    
+    actresschat10.chat_options.create(text: "I don't see how that's any of anyone else's business, ma'am.", nextResponse_id: actresschat11.id)
+    actresschat10.chat_options.create(text: "We might have spent some of our extracurricular time together.", nextResponse_id: actresschat12.id)
+    
+    actresschat11.chat_options.create(text: "I can't say I appreciate it, ma'am.")
+    
+    actresschat12.chat_options.create(text: "Are you supposed to call your own affairs torrid?", nextResponse_id: actresschat13.id)
+    
+    actresschat13.chat_options.create(text: "**Scandalized pause**", nextResponse_id: actresschat14.id)
+    actresschat13.chat_options.create(text: "**Nudge nudge, wink wink, eh?**", nextResponse_id: actresschat14.id)
+    
+    actresschat14.chat_options.create(text: "What makes you say that?", nextResponse_id: actresschat15.id)
+    
+    actresschat15.chat_options.create(text: "Do you think Riccardo would want to harm her?", nextResponse_id: actresschat16.id)
+    
+    actresschat16.chat_options.create(text: "There are still questions surrounding the circumstances of her death. I was just curious.", nextResponse_id: actresschat17.id)
+    actresschat16.chat_options.create(text: "I was told that other people have heard them arguing time and again.", nextResponse_id: actresschat25.id)
+    
+    actresschat17.chat_options.create(text: "Are you absolutely sure about that?", nextResponse_id: actresschat20.id)
+    actresschat17.chat_options.create(text: "How long have you known him?", nextResponse_id: actresschat18.id)
+    
+    actresschat18.chat_options.create(text: "What do you mean?", nextResponse_id: actresschat19.id)
+    actresschat19.chat_options.create(text: "That sounds like an unfortunate position to be in.", nextResponse_id: actresschat31.id)
+    
+    actresschat20.chat_options.create(text: "Well, what else did Tess say about him?", nextResponse_id: actresschat21.id)
+    actresschat21.chat_options.create(text: "Did Riccardo take that seriously?", nextResponse_id: actresschat22.id)
+    actresschat21.chat_options.create(text: "She never mentioned anything like that to me.", nextResponse_id: actresschat29.id)
+
+    actresschat22.chat_options.create(text: "How did you know Tess, if I may ask, miss Hassan?", nextResponse_id: actresschat23.id)
+    actresschat23.chat_options.create(text: "Thank you so much for your time Miss Hassan.", nextResponse_id: actresschat24.id)
+    actresschat24.chat_options.create(text: "I appreciate the heads up, ma'am.")
+
+    actresschat25.chat_options.create(text: "Oh... my mistake then, ma'am. I might have mistaken what others were conveying to me.", nextResponse_id: actresschat26.id)
+    actresschat26.chat_options.create(text: "My apologies, ma'am.")
+    
+    actresschat25.chat_options.create(text: "Maybe they just kept their squabbles to when you weren't around... so that you didn't get caught up in their spat?", nextResponse_id: actresschat27.id)
+    actresschat27.chat_options.create(text: "I see.", nextResponse_id: actresschat28.id)
+    actresschat27.chat_options.create(text: "Who knows what happens behind closed doors though?", nextResponse_id: actresschat28.id)
+    actresschat28.chat_options.create(text: "My apologies, ma'am.")
+
+    actresschat29.chat_options.create(text: "That's understandable. What about you, Miss Hassan, what do you believe?", nextResponse_id: actresschat36.id)
+    
+    actresschat30.chat_options.create(text: "Ricky?", nextResponse_id: actresschat15.id)
+    actresschat31.chat_options.create(text: "Thank you so much for your time Miss Hassan.")
+
+    actresschat32.chat_options.create(text: "Was she alone? Or was her husband with her?", nextResponse_id: actresschat33.id)
+    actresschat32.chat_options.create(text: "Did it sound like an argument?", nextResponse_id: actresschat37.id)
+    
+    actresschat33.chat_options.create(text: "Did it sound like an argument?", nextResponse_id: actresschat34.id)
+    actresschat34.chat_options.create(text: "That's probably why Tess kept it secret...")
+    
+    actresschat35.chat_options.create(text: "I might venture to do just that.")
+    
+    actresschat36.chat_options.create(text: "Seems to be all of us these days. I can ask around to see if anyone else knows something. Thank you for your time Miss Hassan.")
+    actresschat37.chat_options.create(text: "Do you think it could have turned violent somehow?", nextResponse_id: actresschat38.id)
+
+    actresschat38.chat_options.create(text: "Thank you so much for your time Miss Hassan.")
+
 
 museumhead = Character.create(name: "Riccardo Bonardi", description: "Riccardo is the head of the Egypt department at the British Museum. You're very familiar with him and hope you get to be featured in one of his exhibits.", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698706/Characters/Gentleman2_swo28q.png", display: true)
 museumheadchat1 = Chat.create(character: museumhead, response: "Well, hello, darling, how are you doing on this fine day?")
