@@ -296,10 +296,60 @@ husband = Character.create(name: "Lord Kit Sharp" , description: "Lord Kit Sharp
 husbandchat = Chat.create(character: husband, response: "Well, hello, darling, how are you doing on this fine day?")
 
 wife = Character.create(name: "Lady Amelia Sharp", description: "Lady Amelia Sharp, Kit's wife, is pretty, flirty, good company. Who really needs anything else?", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704028/Characters/Arch_woman_qcqvpd.png", display: true)
-wifechat = Chat.create(character: wife, response: "Well, hello, darling, how are you doing on this fine day?")
+# Wife Chat
+    wifechat1 = Chat.create(character: wife, response: "Hail and well met professor!")
+    wifechat2 = Chat.create(character: wife, response: "Isn't it so sad about Tess?")
+    wifechat3 = Chat.create(character: wife, response: "I'm truly heartbroken.")
+    wifechat4 = Chat.create(character: wife, response: "I mean, not really.")
+    wifechat5 = Chat.create(character: wife, response: "I did once hear my husband talk about how Tess had reviewed one of Gael's publications, and had written some not very nice things about him.")
+    wifechat6 = Chat.create(character: wife, response: "I can't imagine he'd want to share that information. He could have been looking to get revenge on Tess, y'know?")
+    wifechat7 = Chat.create(character: wife, response: "Well, I don't particularly have a hand in the matter, so I don't know that I can help you any more.")
+    wifechat8 = Chat.create(character: wife, response: "He's been especially disgruntled lately. I don't know if he wanted to get the glory from this find and memorialize his name in your field, but that I know he thinks he deserves far more than he's been getting.")
+    wifechat9 = Chat.create(character: wife, response: "That you do. But it is fascinating. This entire story of Hatshepsut --- it's riveting isn't it?")
+    wifechat10 = Chat.create(character: wife, response: "I mean, she was such a powerhouse. She remade herself as the daughter of the god Amun in order to legitimize her rule. I can certainly empathize with the need to remake oneself to succeed in a male-dominated world.")
+    wifechat11 = Chat.create(character: wife, response: "That's one way to put it.")
+    wifechat12 = Chat.create(character: wife, response: "Why so suspicious Professor?")
+    wifechat13 = Chat.create(character: wife, response: "Curious, eh? Is that why you've been asking around about who killed Tess?")
+    wifechat14 = Chat.create(character: wife, response: "I've heard many things.")
+    wifechat15 = Chat.create(character: wife, response: "Why on earth would I do that?")
+    wifechat16 = Chat.create(character: wife, response: "Yeah, because we'd been flirting for the past few months...  I wanted to seal the deal.")
+    wifechat17 = Chat.create(character: wife, response: "Yeah, but she rejected me completely. I mean, I've got a pretty good intuition about these kinds of things, and her entire response was such a shock.")
+    wifechat18 = Chat.create(character: wife, response: "Psh, marriage isn't a prison. I love dear Kit, but we very much have an open relationship.")
+    wifechat19 = Chat.create(character: wife, response: "That we are free to spend our time however we wish. Our commitment to each other is fully real and we love each other very much.")
+    wifechat20 = Chat.create(character: wife, response: "Not at all. We just live different lifestyles than what you might expect.")
+    wifechat21 = Chat.create(character: wife, response: "Absolutely not. I was surprised to be rejected so handily, but one learns to move on.")
+    
+    wifechat1.chat_options.create(text: "Good afternoon, Lady Sharp.", nextResponse_id: wifechat2.id)
+    wifechat1.chat_options.create(text: "What are you doing here, Lady Sharp?", nextResponse_id: wifechat12.id)
+    wifechat2.chat_options.create(text: "It's terrible.", nextResponse_id: wifechat3.id)
+    wifechat3.chat_options.create(text: "As we all are.")
+
+    wifechat2.chat_options.create(text: "Do you know anything about it?", nextResponse_id: wifechat4.id)
+    wifechat4.chat_options.create(text: "You don't think anyone was out to get her?", nextResponse_id: wifechat5.id)
+    wifechat5.chat_options.create(text: "He didn't mention anything like that to me.", nextResponse_id: wifechat6.id)
+    wifechat6.chat_options.create(text: "That could be possible, but I find that hard to believe.", nextResponse_id: wifechat7.id)
+    wifechat7.chat_options.create(text: "Thanks for the information you were able to provide.")
+
+    wifechat6.chat_options.create(text: "He did seem a little suspicious.", nextResponse_id: wifechat8.id)
+    wifechat8.chat_options.create(text: "We work in a competitive field, milady.", nextResponse_id: wifechat9.id)
+    wifechat9.chat_options.create(text: "Is there anything in particular that caught your fancy about her?", nextResponse_id: wifechat10.id)
+    wifechat10.chat_options.create(text: "Truly, the field of archaeology is subject to the very same issues that permeate the ability to rule.", nextResponse_id: wifechat11.id)
+    wifechat11.chat_options.create(text: "Well, I appreciate your sharing your thoughts with me, milady.")
+
+    wifechat12.chat_options.create(text: "Not suspicious! Just curious.", nextResponse_id: wifechat13.id)
+    wifechat13.chat_options.create(text: "You've heard about that?", nextResponse_id: wifechat14.id)
+    wifechat14.chat_options.create(text: "Well, did you kill her?", nextResponse_id: wifechat15.id)
+    wifechat15.chat_options.create(text: "You were seen entering Tess's tent last night.", nextResponse_id: wifechat16.id)
+    wifechat16.chat_options.create(text: "What?", nextResponse_id: wifechat17.id)
+    wifechat17.chat_options.create(text: "But aren't you married?", nextResponse_id: wifechat18.id)
+    wifechat18.chat_options.create(text: "What does that mean?", nextResponse_id: wifechat19.id)
+    wifechat19.chat_options.create(text: "But doesn't being in an open relationship lie directly in contrast to that?", nextResponse_id: wifechat20.id)
+    wifechat20.chat_options.create(text: "Okay. So you're saying you had nothing to do with her death?", nextResponse_id: wifechat21.id)
+    wifechat21.chat_options.create(text: "Do you know anyone that might have actually had a hand in her death?", nextResponse_id: wifechat5.id)
+
 
 colleague = Character.create(name: "Gael Vergara", description: "Gael is a colleague of yours from your university. He's jovial and serious, a good combination in someone you want to work with. You do empathize with him for not really getting the kind of success he thinks he deserves.", room: digsite, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698701/Characters/Colleague_vndk7k.png", display: true)
-# Colleage Chat
+# Colleague Chat
     colleaguechat1 = Chat.create(character: colleague, response: "How goes it, old chap?")
     colleaguechat2 = Chat.create(character: colleague, response: "Yeah, it's quit shit isn't it?")
     colleaguechat3 = Chat.create(character: colleague, response: "Murdered? That doesn't surprise me.")
@@ -318,11 +368,8 @@ colleague = Character.create(name: "Gael Vergara", description: "Gael is a colle
     colleaguechat16 = Chat.create(character: colleague, response: "Okay... you make a good point. You know the Lord Sharp?")
     colleaguechat17 = Chat.create(character: colleague, response: "Well, Lord Kit and I were college buddies. He asked me if he could join us. Their family's very powerful, I couldn't exactly refuse you know.")
     colleaguechat18 = Chat.create(character: colleague, response: "He's been under his father's thumb for a while, since he was born out of wedlock and all. No one knew who his mother was, just that she had an affair with the senior Sharp and left him.")
-    colleaguechat19 = Chat.create(character: colleague, response: "Turns out, senior Sharp is planning to leave her half his fortune, and Kit wanted to join our expedition to change that outcome.")
-    colleaguechat20 = Chat.create(character: colleague, response: "Technically, not anymore. Tess was his mother.")
-    colleaguechat21 = Chat.create(character: colleague, response: "I know, it's hard to imagine.")
-    colleaguechat22 = Chat.create(character: colleague, response: "Exactly. You can see why he could be a suspect in her murder.")
-    colleaguechat23 = Chat.create(character: colleague, response: "I've known Kit a long time, and when he told me about his predicament, I wanted to do everything to help him. But the way he's been with her, I don't know.")
+    colleaguechat19 = Chat.create(character: colleague, response: "I don't think I can say anymore. It's his secret to share.")
+    
     
     colleaguechat1.chat_options.create(text: "Devo, I dare say.", nextResponse_id: colleaguechat2.id)
     colleaguechat1.chat_options.create(text: "It's all gone to shit, man.", nextResponse_id: colleaguechat2.id)
@@ -347,11 +394,8 @@ colleague = Character.create(name: "Gael Vergara", description: "Gael is a colle
     colleaguechat16.chat_options.create(text: "Of course. I still wonder how such a frivolous couple ended up on our expedition.", nextResponse_id: colleaguechat17.id)
     colleaguechat17.chat_options.create(text: "Why did he ask you to join us?", nextResponse_id: colleaguechat18.id)
     colleaguechat18.chat_options.create(text: "And..?", nextResponse_id: colleaguechat19.id)
-    colleaguechat19.chat_options.create(text: "Does that mean Kit's mother is here with us?", nextResponse_id: colleaguechat20.id)
-    colleaguechat20.chat_options.create(text: "*GASP*", nextResponse_id: colleaguechat21.id)
-    colleaguechat21.chat_options.create(text: "So he wanted to get her to convince his father not to leave her any of his fortune?", nextResponse_id: colleaguechat22.id)
-    colleaguechat22.chat_options.create(text: "You think he'd want it bad enough to kill her?", nextResponse_id: colleaguechat23.id)
-    colleaguechat23.chat_options.create(text: "Thanks, Gael. You've been really helpful.")
+    colleaguechat19.chat_options.create(text: "Oh, Gael.")
+    
 
 
 puts "Loading Actress"
