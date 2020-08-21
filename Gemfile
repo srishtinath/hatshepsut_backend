@@ -23,7 +23,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'cloudinary'
-gem 'rack-cors'
+# gem 'rack-cors'
 gem 'active_model_serializers'
 gem 'jwt'
 
