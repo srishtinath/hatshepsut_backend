@@ -207,7 +207,7 @@ treasureroom = Room.create(name: "TreasureRoom", description: "Hatshepsut's Tomb
     
     ooohVase = Location.create(name: "More vases", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595957808/Room8New/Room8Vase_fnmuds.png", positionX: 70, positionY: 55, size: 3)
 
-puts "Loading Guide and Chat"
+puts "Loading Characters and Chats"
     guide = Character.create(name: "Atif Mostafa", room: tent, 
         description: "Atif is the Egyptian guide that has been helping your team make its way through the sands 
         burying the lost tomb of Hatshepsut.", 
@@ -442,7 +442,6 @@ colleague = Character.create(name: "Gael Vergara", description: "Gael is a colle
     
 
 
-puts "Loading Actress"
 actress = Character.create(name: "Isra Hassan", room: entrance, description: "The venerable Miss Isra Hassan is a famous Lebanese actress. You're lucky she's graced you all with her presence! Not sure what she's doing on an archaeological expedition exactly, but who's to complain when she's got such star power?", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595702957/Characters/Actress2_bwsb9q.png", display: true)
 # Actress Chat
     actresschat1 = Chat.create(character: actress, response: "Hello, there! How's it going?")
@@ -559,25 +558,108 @@ actress = Character.create(name: "Isra Hassan", room: entrance, description: "Th
 
 
 museumhead = Character.create(name: "Riccardo Bonardi", description: "Riccardo is the head of the Egypt department at the British Museum. You're very familiar with him and hope you get to be featured in one of his exhibits.", room: pyramidroom3, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698706/Characters/Gentleman2_swo28q.png", display: true)
-museumheadchat1 = Chat.create(character: museumhead, response: "Well, hello, darling, how are you doing on this fine day?")
+# Museum Head Chat
+    museumheadchat1 = Chat.create(character: museumhead, response: "Welcome, Professor, to the infamous antechamber.")
+    museumheadchat2 = Chat.create(character: museumhead, response: "Well, I'm sure you've heard all about the curse, haven't you?")
+    museumheadchat3 = Chat.create(character: museumhead, response: "Ancient pharaoh tombs, whenever disturbed are wont to cast curses on the people that open them.")
+    museumheadchat4 = Chat.create(character: museumhead, response: "You're right... when Napoleon found the pyramids at Giza, he supposedly spent eight hours in there, and wouldn't speak a word of what transpired.")
+    museumheadchat5 = Chat.create(character: museumhead, response: "Absolutely. This room is filled with treasures from one of Hatshepsut's most famous expeditions, though, which makes it all the more valuable.")
+    museumheadchat6 = Chat.create(character: museumhead, response: "To a legendary land called Punt. Look, they have plants that they supplanted from there. Remarkable.")
+    museumheadchat7 = Chat.create(character: museumhead, response: "I'd say, modern day Somalia.")
+    museumheadchat8 = Chat.create(character: museumhead, response: "Oh yes. These artifacts will secure Britain's reputation in the archaeology world. Surely you must be in support of that.")
+    museumheadchat9 = Chat.create(character: museumhead, response: "Don't tell me you would betray your countrymen like that?")
+    museumheadchat10 = Chat.create(character: museumhead, response: "If you remember, Professor, Egypt is currently under British control. That would make this land ours.")
+    museumheadchat11 = Chat.create(character: museumhead, response: "You have gotten quite friendly with these Egyptians in our time here. ")
+    museumheadchat12 = Chat.create(character: museumhead, response: "Are you sure Professor? My goal is to bring glory to Britain. I'm not quite sure where yours lie.")
+    museumheadchat13 = Chat.create(character: museumhead, response: "I knew it. I knew it from the very beginning.")
+    museumheadchat14 = Chat.create(character: museumhead, response: "These Egyptians weren't to be trusted. They got into your head, probably filled it with ridiculous ideas about their claims on the treasure.")
+    museumheadchat15 = Chat.create(character: museumhead, response: "Isra told me you and Tess were seen hanging out, and I should have stopped you. Alas, that's what I get for not acting when I knew better.")
+    museumheadchat16 = Chat.create(character: museumhead, response: "If you say so Professor. If you would please vacate the room, I would like to begin cataloging the items here.")
+    museumheadchat17 = Chat.create(character: museumhead, response: "That's what I like to hear, Professor. Now if you can help me gather these treasures we can begin shipping them off when our transportation arrives tomorrow.")
+    museumheadchat18 = Chat.create(character: museumhead, response: "Yes, the British Museum thinks it's of the utmost importance to get these back to the UK to have them properly examined, don't you think?")
+    museumheadchat19 = Chat.create(character: museumhead, response: "See? You get it. It is a part of world history after all. Imagine all of the fame and fortune it will bring us.")
+    museumheadchat20 = Chat.create(character: museumhead, response: "My family might be, but I'm a born and bred Brit.")
+    museumheadchat21 = Chat.create(character: museumhead, response: "Our paths crossed a few times. The world of archaeology is very small, and a female archaeologist? Those are even rarer.")
+    museumheadchat22 = Chat.create(character: museumhead, response: "I can't say that we principally agree on most things.")
+    museumheadchat23 = Chat.create(character: museumhead, response: "What? I have no idea what you're talking about!")
+    museumheadchat24 = Chat.create(character: museumhead, response: "I did no such thing. I might have mentioned to Isra that we don't get along but to kill Tess? That seems like a bit of a stretch don't you think?")
+    museumheadchat25 = Chat.create(character: museumhead, response: "Well you don't exactly have any proof she was even murdered do you? I heard she died of a heart attack.")
+
+    museumheadchat1.chat_options.create(text: "Infamous? What makes it that?", nextResponse_id: museumheadchat2.id)
+    museumheadchat2.chat_options.create(text: "The curse?", nextResponse_id: museumheadchat3.id)
+    museumheadchat3.chat_options.create(text: "Do we ever really know what happens in pharaoh tombs, though?", nextResponse_id: museumheadchat4.id)
+    museumheadchat4.chat_options.create(text: "Still, it's quite a spooky thought.", nextResponse_id: museumheadchat5.id)
+    museumheadchat5.chat_options.create(text: "Oh yeah? Where was this expedition to?", nextResponse_id: museumheadchat6.id)
+    museumheadchat6.chat_options.create(text: "Where is it located today?", nextResponse_id: museumheadchat7.id)
+    museumheadchat7.chat_options.create(text: "Amazing.")
+
+    museumheadchat1.chat_options.create(text: "Found the best spot in the house didn't you sir?", nextResponse_id: museumheadchat8.id)
+    museumheadchat8.chat_options.create(text: "I don't know if these things belong to the British though... they are a part of Egyptian history.", nextResponse_id: museumheadchat9.id)
+    museumheadchat9.chat_options.create(text: "It's not a betrayal to the crown to respect the wishes of the people that own the land.", nextResponse_id: museumheadchat10.id)
+    museumheadchat10.chat_options.create(text: "We can agree to disagree.")
+
+    museumheadchat9.chat_options.create(text: "I would never do that! Are you questioning my loyalty, sir?", nextResponse_id: museumheadchat11.id)
+    museumheadchat11.chat_options.create(text: "So? We're all working together to achieve the same goal.", nextResponse_id: museumheadchat12.id)
+    museumheadchat12.chat_options.create(text: "Love has changed me.", nextResponse_id: museumheadchat13.id)
+    museumheadchat13.chat_options.create(text: "Knew what?", nextResponse_id: museumheadchat14.id)
+    museumheadchat14.chat_options.create(text: "I don't know if I agree with that sir. ", nextResponse_id: museumheadchat15.id)
+    museumheadchat15.chat_options.create(text: "I don't think what I do in my life is any of your business, sir. ", nextResponse_id: museumheadchat16.id)
+
+    museumheadchat12.chat_options.create(text: "I can assure you sir, I'm a loyal servant of the Queen.", nextResponse_id: museumheadchat17.id)
+    museumheadchat17.chat_options.create(text: "Tomorrow?", nextResponse_id: museumheadchat18.id)
+    museumheadchat18.chat_options.create(text: "Absolutely!")
+
+    museumheadchat8.chat_options.create(text: "Us Brits have funded the whole endeavor. Only makes sense.", nextResponse_id: museumheadchat19.id)
+    museumheadchat19.chat_options.create(text: "Aren't you Italian though?", nextResponse_id: museumheadchat20.id)
+    museumheadchat20.chat_options.create(text: "Well did you know Tess when she visited London?", nextResponse_id: museumheadchat21.id)
+    museumheadchat21.chat_options.create(text: "I've heard that the two of you don't exactly like each other.", nextResponse_id: museumheadchat22.id)
+    museumheadchat22.chat_options.create(text: "Is that why you would want to kill her?", nextResponse_id: museumheadchat23.id)
+    museumheadchat23.chat_options.create(text: "Did you hate her for getting in your way? To bring all this treasure back to Britain?", nextResponse_id: museumheadchat24.id)
+    museumheadchat24.chat_options.create(text: "I'm not sure.", nextResponse_id: museumheadchat25.id)
+    museumheadchat25.chat_options.create(text: "Well we'll have to see about that.")
 
 hatshepsutGhost = Character.create(name: "Queen Hatshepsut" , room: dreamSequence, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595266742/Characters/Screen_Shot_2020-07-20_at_1.37.59_PM_rhw9xf.png", display: false)
     Chat.create(character: hatshepsutGhost, response: "Welcome to my tomb!")
-    Chat.create(character: hatshepsutGhost, response: "I am the ghost of Queen Hatshepsut. You may call me Hat in reverence...")
+    Chat.create(character: hatshepsutGhost, response: "I am the ghost of Queen Hatshepsut. You may call me your royal highness, as would be appropriate...")
     Chat.create(character: hatshepsutGhost, response: "I see you have found my tomb...")
     Chat.create(character: hatshepsutGhost, response: "I lay here in rest for hundreds of years...")
     Chat.create(character: hatshepsutGhost, response: "And yet you have disturbed my slumber...")
-    Chat.create(character: hatshepsutGhost, response: "However, I believe you are kind of heart...")
-    Chat.create(character: hatshepsutGhost, response: "And I believe someone murdered your friend...")
-    Chat.create(character: hatshepsutGhost, response: "Professor Ali was a worshipper of the old gods...")
-    Chat.create(character: hatshepsutGhost, response: "But she was doomed to repeat many of the same mistakes I did...tomb!")
-    Chat.create(character: hatshepsutGhost, response: "While my connection with the real world is weak...")
+    Chat.create(character: hatshepsutGhost, response: "...")
+    Chat.create(character: hatshepsutGhost, response: "...")
+    Chat.create(character: hatshepsutGhost, response: "...")
+    Chat.create(character: hatshepsutGhost, response: "However....")
+    Chat.create(character: hatshepsutGhost, response: "I believe you are kind of heart...")
+    Chat.create(character: hatshepsutGhost, response: "And I believe someone murdered Professor Tess Ali...")
+    Chat.create(character: hatshepsutGhost, response: "Tess was a worshipper of the old gods...")
+    Chat.create(character: hatshepsutGhost, response: "But she was doomed to suffer the consequences of being born into a world that's too small for you...")
+    Chat.create(character: hatshepsutGhost, response: "...")
+    Chat.create(character: hatshepsutGhost, response: "Although my connection with the real world is weak...")
     Chat.create(character: hatshepsutGhost, response: "I will try to help you...")
-    Chat.create(character: hatshepsutGhost, response: "You can click on the button here...")
-    Chat.create(character: hatshepsutGhost, response: "And I can provide you clues...")
+    Chat.create(character: hatshepsutGhost, response: "You can click on the button on the menu on the right...")
+    Chat.create(character: hatshepsutGhost, response: "And I can help provide you clues on your quest to find the truth...")
 
 
-hatshepsutGhost2 = Character.create(name: "Queen Hatshepsut" , room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698738/Characters/Queen2_oiftmd.png", display: false)
-    ghostchat1 = Chat.create(character: hatshepsutGhost2, response: "Well, hello, darling, how are you doing on this fine day?")
+
+pharoahGhost2 = Character.create(name: "Queen Hatshepsut" , description: "Queen Hatshepsut, one of the first and most powerful pharaohs of Egypt lies in this tomb. She is regal, stunning and benevolent.", room: treasureroom, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698738/Characters/Queen2_oiftmd.png", display: false)
+#Ghost Chat
+    ghostchat1 = Chat.create(character: pharoahGhost2, response: "Welcome to my treasure chamber, finally. So did you figure it out yet?")
+    ghostchat2 = Chat.create(character: pharoahGhost2, response: "Very well, let's put that aside for now. Do you know why I'm helping you?")
+    ghostchat3 = Chat.create(character: pharoahGhost2, response: "Tess, well, she's very special to me.")
+    ghostchat4 = Chat.create(character: pharoahGhost2, response: "You see, she's a descendant of mine. ")
+    ghostchat5 = Chat.create(character: pharoahGhost2, response: "It's my responsibility to protect her in life and in death.")
+    ghostchat6 = Chat.create(character: pharoahGhost2, response: "She's passed on... but her spirit is still in trouble.")
+    ghostchat7 = Chat.create(character: pharoahGhost2, response: "She's going to be undergoing the weighing of the heart ceremony right now... but with her killer still being at large she won't be allowed to pass through.")
+    ghostchat8 = Chat.create(character: pharoahGhost2, response: "Yes. I have helped you as much as I can. The rest is up to you.")
+
+    ghostchat1.chat_options.create(text: "I'm pretty sure.", nextResponse_id: ghostchat2.id)
+    ghostchat1.chat_options.create(text: "I have no idea.", nextResponse_id: ghostchat2.id)
+    ghostchat1.chat_options.create(text: "I think I could investigate some more.", nextResponse_id: ghostchat2.id)
+    ghostchat2.chat_options.create(text: "I don't think I know, your highness.", nextResponse_id: ghostchat3.id)
+    ghostchat3.chat_options.create(text: "What makes her so special?", nextResponse_id: ghostchat4.id)
+    ghostchat4.chat_options.create(text: "Ah. I can see why you would take an interest in her.", nextResponse_id: ghostchat5.id)
+    ghostchat5.chat_options.create(text: "Can you tell me where she is now?", nextResponse_id: ghostchat6.id)
+    ghostchat6.chat_options.create(text: "What do you mean?", nextResponse_id: ghostchat7.id)
+    ghostchat7.chat_options.create(text: "So I have to find the killer, don't I?", nextResponse_id: ghostchat8.id)
+
 
 victim = Character.create(name: "Tess Ali" , description: "Professor Ali is an exalted professor of archaeology at Cairo University in her fifties. Beautiful, witty, honorable, and generous have all been used to describe her. She's had an illustrious career but has been surrounded by some controversy recently.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704284/Characters/Woman_holding_vase_olcj3r.png", display: true)
