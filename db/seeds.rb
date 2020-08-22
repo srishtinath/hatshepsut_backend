@@ -137,7 +137,7 @@ pyramidroom1 = Room.create(name: "PyramidRoom1", description: "First Room Inside
     canopicJar2 = Item.create(name: "Canopic jar containing organs", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Remains2_pfsk8c.png")
     ankh = Item.create(name: "Ankh", location: satchel, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595625907/Items/Ankh-complete_choj5m.png")
      
-    vasesOnTable = Location.create(name:"Fancy Vase wow", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1598112675/Room4-New/Room4Vase_ynjxwv.png", positionX: 48, positionY: 29, size: 5)
+    vasesOnTable = Location.create(name:"Fancy Vase wow", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1598112675/Room4-New/Room4Vase_ynjxwv.png", positionX: 48, positionY: 29, size: 6)
     whips = Item.create(name: "Watch me whip", location: vasesOnTable, description: "Watch me nay nay", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789632/Items/Whip_iuvjux.png")
     money = Item.create(name: "Gold! You're rich!!", location: vasesOnTable, description: "Not that you weren't already", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Treasure2_n9zpdn.png")
 
