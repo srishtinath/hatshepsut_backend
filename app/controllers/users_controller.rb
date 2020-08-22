@@ -46,7 +46,7 @@ class UsersController < ApplicationController
     
     
     def wrongGuess
-        @user = User.find(params[:id])
+        @user = User.find(params[:user_id])
         UserRoom.where(user_id: @user.id).destroy_all
         render json: {message: "All user rooms have been removed"}
     end
