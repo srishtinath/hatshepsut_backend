@@ -44,14 +44,13 @@ class UsersController < ApplicationController
         render json: {user: UserSerializer.new(@user), token: wristband}
     end
     
-    # def edit
     
-    # end
-    
-    # def update
-    
-    # end
-    
+    def wrongGuess
+        @user = User.find(params[:id])
+        UserRoom.where(user_id: @user.id).destroy_all
+        render json: {message: "All user rooms have been removed"}
+    end
+
     def show
         @user = User.find(params[:id])
         render :json => @user
