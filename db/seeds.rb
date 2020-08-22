@@ -86,10 +86,6 @@ puts "Loading Room 1 Content"
     deskLantern = Location.create(name: "desk lantern", room: tent, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1598109820/Room1-New/Room1TableLantern_ljh79r.png", positionX: 76, positionY: 38, size: 3)
     scarab = Item.create(name: "scarab brooch", location: deskLantern, description: "What a beautiful brooch", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704176/Items/Scarab_statue_atiep5.png")
 
-puts "Loading Room 5 Content"
-dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
-    description: "", display: false)
-
 puts "Loading Room 2 Content"
 # Actress
     entrance = Room.create(name: "outside", description: "Path leading to Dig Site", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595994769/Hatshepsut/Screen_Shot_2020-07-28_at_11.37.33_PM_nbkgdj.png", display: true)
@@ -122,6 +118,10 @@ puts "Loading Room 3 Content"
 
 
 puts "Loading Room 4 Content"
+    dreamSequence = Room.create(name: "dream", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536198/Hatshepsut/Dream_Sequence_h09eb3.png",
+    description: "", display: false)
+
+puts "Loading Room 5 Content"
 # Husband
 pyramidroom1 = Room.create(name: "PyramidRoom1", description: "First Room Inside Pyramid", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595994857/Hatshepsut/Screen_Shot_2020-07-28_at_11.51.31_PM_gmbjnm.png", display: true)
 
@@ -142,17 +142,10 @@ pyramidroom1 = Room.create(name: "PyramidRoom1", description: "First Room Inside
     money = Item.create(name: "Gold! You're rich!!", location: vasesOnTable, description: "Not that you weren't already", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Treasure2_n9zpdn.png")
 
     tablet = Location.create(name: "Tablet", room: pyramidroom1, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789630/Items/Tablet_dwozlv.png", positionX: 85, positionY: 3, size: 3)
- 
 
-    
 puts "Loading Room 6 Content"
 pyramidroom2 = Room.create(name: "PyramidRoom2", description: "Second Room inside Pyramid", story: hatshepsut, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595536125/Hatshepsut/Pyramid_Room_2_zqepmy.png", display: true)
-    # Wife
-    # horus = Location.create(name: "Horus Glyph", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Horus_wpg4nd.png", positionX: 75, positionY: 30, size: 3 )
-    
-    # wallglyphs = Location.create(name: "Wall Glyphs", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595806276/Items/Heiroglyphblendcolor_xvp8cf.png", positionX: 25, positionY: 45, size: 10 )
-    # theCrowning = Item.create(name: "Papyrus of the Ascension", location: wallglyphs, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Papyrus1_dde7sa.png")
-    
+# Wife    
     wallglyphs2 = Location.create(name: "Some More Wall Glyphs!", room: pyramidroom2, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595806276/Items/Heiroglyphblendcolor_xvp8cf.png", positionX: 25, positionY: 22, size: 9 )
     journeyPapyrus = Item.create(name: "Papyrus of the Journey", location: wallglyphs2, description: "", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595789627/Items/Boat2_edi1mn.png")
     
