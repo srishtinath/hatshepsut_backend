@@ -93,8 +93,8 @@ puts "Loading Room 2 Content"
     stonecarving = Item.create(name: "Is it the Rosetta Stone?", description: "It's just a picture put here for inspiration... the work they're doing here can change the world", location: palmtree, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595805605/Items/HeiroGlyph1_dkatct.png")
 
     camelRider = Location.create(name: "Camel-riding guide", room: entrance, image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595698644/Items/Guide_on_Camel_fjmbn5.png", positionX: 37, positionY: 38, size: 9)
-    camelRiderMan = Item.create(name: "The camel rider", location: camelRider, description: "He tells you that he's been employed by the famous actress over there as assistance on this trip", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1598330578/Items/CamelRider_ul4cmk.png")
-    arabicboy = Item.create(name: "Camel rider's son", location: camelRider, description: "The little boy informs you that the woman's been stealing things from the pyramid and giving them to his dad to sell...they make a trip to the town every week to sell what she gives them", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1596059262/Room2-New/Room2Arabic_Boy_ylzqzg.png")
+    camelRiderMan = Item.create(name: "Masud Deeb, the camel rider", location: camelRider, description: "He tells you that he's been employed by the famous actress over there as assistance on this trip", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1598330578/Items/CamelRider_ul4cmk.png")
+    arabicboy = Item.create(name: "Masud's son", location: camelRider, description: "The little boy informs you that the woman's been stealing things from the pyramid and giving them to his dad to sell...they make a trip to the town every week to sell what she gives them", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1596059262/Room2-New/Room2Arabic_Boy_ylzqzg.png")
 # Character
 
 puts "Loading Room 3 Content"
