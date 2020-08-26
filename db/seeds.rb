@@ -663,4 +663,6 @@ pharoahGhost2 = Character.create(name: "Queen Hatshepsut" , description: "Queen 
     ghostchat7.chat_options.create(text: "So I have to find the killer, don't I?", nextResponse_id: ghostchat8.id)
 
 
-victim = Character.create(name: "Tess Ali" , description: "Professor Ali is an exalted professor of archaeology at Cairo University in her fifties. Beautiful, witty, honorable, and generous have all been used to describe her. She's had an illustrious career but has been surrounded by some controversy recently.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704284/Characters/Woman_holding_vase_olcj3r.png", display: true)
+victim = Character.create(name: "Tess Ali" , description: "Professor Ali is an exalted professor of archaeology at Cairo University in her fifties. Beautiful, witty, honorable, and generous have all been used to describe her. 
+    She's had an illustrious career but has been surrounded by some controversy recently.", image_url: "https://res.cloudinary.com/dqtw2xfuf/image/upload/v1595704284/Characters/Woman_holding_vase_olcj3r.png", display: true)
+    victimchat1 = Chat.create(character: victim, response: "Well, hello there, professor.")
